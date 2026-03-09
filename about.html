@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Jokamav Technologies Limited</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .about-section { padding: 90px 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-content h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin-bottom: 20px; }
+    .about-content p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+    .about-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 32px; }
+    .about-stat { background: var(--gray); border-radius: 12px; padding: 20px; text-align: center; border-left: 4px solid var(--orange); }
+    .about-stat strong { display: block; font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--orange); }
+    .about-stat span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+    .about-visual { background: linear-gradient(135deg, var(--dark), var(--dark-2)); border-radius: 20px; padding: 48px; text-align: center; color: var(--white); }
+    .about-visual .big-icon { font-size: 80px; margin-bottom: 24px; display: block; }
+    .about-visual h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+    .about-visual p { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.7; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .team-card { background: var(--white); border-radius: 14px; padding: 28px 20px; text-align: center; border: 1px solid #ebebeb; transition: var(--transition); }
+    .team-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--orange); }
+    .team-card__avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--orange), var(--dark)); display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 16px; }
+    .team-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .team-card__role { font-size: 13px; color: var(--orange); font-weight: 600; margin-bottom: 12px; }
+    .team-card__certs { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .value-card { padding: 28px; border-radius: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); text-align: center; transition: var(--transition); }
+    .value-card:hover { background: rgba(230,120,23,0.1); border-color: rgba(230,120,23,0.3); transform: translateY(-4px); }
+    .value-card__icon { font-size: 36px; margin-bottom: 16px; display: block; }
+    .value-card h3 { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .value-card p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .team-grid { grid-template-columns: repeat(2, 1fr); } .values-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } .about-stats { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="announcement-bar">
+      <p>🔒 Jokamav Technologies — Specializing in Modern Security & Smart Infrastructure Solutions</p>
+    </div>
+    <nav class="nav">
+      <div class="nav__container">
+        <a href="index.html" class="nav__logo"><span class="nav__logo-icon">⚡</span><span>Jokamav<strong>Tech</strong></span></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li class="has-dropdown">
+            <a href="services.html">Our Services <span class="chevron">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="service-detail.html?service=cctv">CCTV Camera Systems</a></li>
+              <li><a href="service-detail.html?service=turnstile">Turnstile Systems</a></li>
+              <li><a href="service-detail.html?service=parking">Parking Management</a></li>
+              <li><a href="service-detail.html?service=pabx">PABX & Intercom</a></li>
+              <li><a href="service-detail.html?service=access">Access Control</a></li>
+              <li><a href="service-detail.html?service=smartlock">Smart Lock Solutions</a></li>
+              <li><a href="service-detail.html?service=electric">Electric Fencing</a></li>
+              <li><a href="service-detail.html?service=tracking">Car Tracking</a></li>
+              <li><a href="service-detail.html?service=gate">Gate Automation</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="contact.html" class="btn btn--primary">Request a Quote</a>
+          <button class="nav__toggle" id="navToggle"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <p class="breadcrumb"><a href="index.html">Home</a> › <span>About Us</span></p>
+      <h1>About Jokamav Technologies</h1>
+      <p>A trusted Nigerian security and smart systems solutions company, delivering excellence since 2015.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-tag">Our Story</span>
+          <h2>Who We Are</h2>
+          <p>Jokamav Technologies Limited is a Nigerian-based security and smart systems solutions company, established on <strong>July 13, 2015</strong>, in Challenge, Ibadan, Oyo State.</p>
+          <p>Since our inception, we have remained committed to delivering reliable, innovative, and scalable technology solutions that enhance safety, access control, and operational efficiency for businesses, estates, and institutions across Nigeria.</p>
+          <p>From humble beginnings, Jokamav Technologies Limited has grown into a trusted name in the design, supply, installation, and maintenance of advanced security and automation systems. Our strength lies in combining technical expertise with a deep understanding of client needs.</p>
+          <div class="about-stats">
+            <div class="about-stat"><strong>2015</strong><span>Year Founded</span></div>
+            <div class="about-stat"><strong>9</strong><span>Core Services</span></div>
+            <div class="about-stat"><strong>500+</strong><span>Projects Completed</span></div>
+            <div class="about-stat"><strong>100%</strong><span>Client Satisfaction</span></div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <span class="big-icon">🛡️</span>
+          <h3>Protecting Nigeria Since 2015</h3>
+          <p>From Challenge, Ibadan to Lagos, Port Harcourt and beyond — we have secured hundreds of homes, businesses and estates with cutting-edge security technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our People</span>
+        <h2>Meet Our Team</h2>
+        <p>We're a group of skilled professionals who share one mission — delivering safe, reliable, and high-quality installations that protect our clients.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-card__avatar">👨‍💼</div>
+          <h3>Adebayo Kayode</h3>
+          <p class="team-card__role">CEO / Director</p>
+          <p class="team-card__certs">NABCEP PV Associate · Geographic Information System (GIS) · ILM</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__avatar">👨‍🔧</div>
+          <h3>Oluwatofunmi Ilesanmi</h3>
+          <p class="team-card__role">Technical Operation Lead</p>
+          <p class="team-card__certs">CompTIA A+ · CompTIA Security+ · Cisco CCNA</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__avatar">👨‍💻</div>
+          <h3>Awoola Emmanuel</h3>
+          <p class="team-card__role">Strategy Analyst</p>
+          <p class="team-card__certs">Microsoft Power BI · Google Analytics</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__avatar">👷</div>
+          <h3>Adigun Adeoluwa</h3>
+          <p class="team-card__role">Field Service Technician Head</p>
+          <p class="team-card__certs">Manual Handling · EV Charger Installation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <span class="section-tag section-tag--orange">What Drives Us</span>
+        <h2>Our Core Values</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card"><span class="value-card__icon">💡</span><h3>Innovation</h3><p>We continuously adopt emerging technologies and best practices to stay ahead in the security industry.</p></div>
+        <div class="value-card"><span class="value-card__icon">🎯</span><h3>Professionalism</h3><p>Every project is executed to the highest professional standards with attention to detail and quality.</p></div>
+        <div class="value-card"><span class="value-card__icon">🤝</span><h3>Customer Satisfaction</h3><p>We build long-term partnerships through trust, excellence, and dependable service delivery.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Portfolio</span>
+        <h2>Notable Projects</h2>
+        <p>Trusted by businesses and institutions across Nigeria.</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card"><div class="project-card__icon">🏠</div><h4>Adron Homes, Jericho II, Ibadan</h4><span>CCTV Surveillance System</span></div>
+        <div class="project-card"><div class="project-card__icon">🏭</div><h4>TOSI Farms & Factory, Okaka</h4><span>CCTV Surveillance System</span></div>
+        <div class="project-card"><div class="project-card__icon">💆</div><h4>So Beautified Salon & Spa, Ikeja GRA</h4><span>CCTV Surveillance System</span></div>
+        <div class="project-card"><div class="project-card__icon">🏗️</div><h4>AAP Infratech, Marina</h4><span>Lift Control & Access Door Installation</span></div>
+        <div class="project-card"><div class="project-card__icon">🏢</div><h4>Tilden Development, Lekki</h4><span>Turnstile, Lift Control & Access Door</span></div>
+        <div class="project-card"><div class="project-card__icon">🏨</div><h4>Estee Hotel, Ibeju-Lekki</h4><span>Intercom, Access Door & Electric Fencing</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <h2>Work With Us</h2>
+        <p>Ready to secure your property? Contact us today.</p>
+        <div class="cta-banner__buttons">
+          <a href="contact.html" class="btn btn--white">Request a Quote</a>
+          <a href="https://wa.me/2348134660834" target="_blank" class="btn btn--outline-white">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__top"><div class="container"><div class="footer__grid">
+      <div class="footer__col footer__brand">
+        <div class="footer__logo"><span class="nav__logo-icon">⚡</span><span>Jokamav<strong>Tech</strong></span></div>
+        <p>Delivering reliable, innovative, and scalable technology solutions across Nigeria.</p>
+        <div class="footer__social"><a href="https://wa.me/2348134660834" target="_blank">💬</a><a href="mailto:jokamavtech@gmail.com">✉️</a><a href="tel:+2348134660834">📞</a></div>
+      </div>
+      <div class="footer__col"><h4>Our Services</h4><ul>
+        <li><a href="service-detail.html?service=cctv">CCTV Camera Systems</a></li>
+        <li><a href="service-detail.html?service=turnstile">Turnstile Systems</a></li>
+        <li><a href="service-detail.html?service=parking">Parking Management</a></li>
+        <li><a href="service-detail.html?service=pabx">PABX & Intercom</a></li>
+        <li><a href="service-detail.html?service=access">Access Control</a></li>
+        <li><a href="service-detail.html?service=electric">Electric Fencing</a></li>
+        <li><a href="service-detail.html?service=tracking">Car Tracking</a></li>
+        <li><a href="service-detail.html?service=gate">Gate Automation</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Contact Us</h4>
+        <div class="footer__contact">
+          <p>📞 <a href="tel:+2348134660834">+234 813 466 0834</a></p>
+          <p>💬 <a href="https://wa.me/2348134660834">WhatsApp Us</a></p>
+          <p>✉️ <a href="mailto:jokamavtech@gmail.com">jokamavtech@gmail.com</a></p>
+          <p>📍 Challenge, Ibadan, Oyo State, Nigeria</p>
+        </div>
+        <div class="footer__established">✦ Established July 13, 2015</div>
+      </div>
+    </div></div></div>
+    <div class="footer__bottom"><div class="container">
+      <p>&copy; <span id="year"></span> Jokamav Technologies Limited. All rights reserved.</p>
+      <p>Designed with ❤️ in Nigeria</p>
+    </div></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

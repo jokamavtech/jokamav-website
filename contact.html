@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Jokamav Technologies Limited</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; padding: 90px 0; }
+    .contact-info h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin-bottom: 16px; }
+    .contact-info > p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 36px; }
+    .contact-card { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--gray); border-radius: 12px; margin-bottom: 16px; border-left: 4px solid var(--orange); transition: var(--transition); }
+    .contact-card:hover { transform: translateX(4px); box-shadow: var(--shadow); }
+    .contact-card__icon { font-size: 24px; flex-shrink: 0; }
+    .contact-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .contact-card a, .contact-card p { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .contact-card a:hover { color: var(--orange); }
+    .contact-form-card { background: var(--white); border-radius: 16px; padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid #ebebeb; }
+    .contact-form-card h3 { font-family: var(--font-display); font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+    .contact-form-card > p { font-size: 14px; color: var(--text-muted); margin-bottom: 28px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 13px 16px; border: 2px solid #ebebeb; border-radius: 10px;
+      font-size: 14px; font-family: var(--font-main); color: var(--text);
+      transition: var(--transition); outline: none; background: var(--white);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--orange); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit { width: 100%; padding: 16px; background: var(--orange); color: var(--white); border: none; border-radius: 30px; font-size: 15px; font-weight: 700; font-family: var(--font-main); cursor: pointer; transition: var(--transition); }
+    .form-submit:hover { background: var(--orange-dark); transform: translateY(-2px); }
+    .form-success { display: none; text-align: center; padding: 24px; background: #f0fdf4; border-radius: 12px; border: 1px solid #86efac; color: #166534; }
+    .form-success h4 { font-size: 18px; margin-bottom: 8px; }
+    @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; padding: 60px 0; } .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="announcement-bar">
+      <p>🔒 Jokamav Technologies — Specializing in Modern Security & Smart Infrastructure Solutions</p>
+    </div>
+    <nav class="nav">
+      <div class="nav__container">
+        <a href="index.html" class="nav__logo"><span class="nav__logo-icon">⚡</span><span>Jokamav<strong>Tech</strong></span></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li class="has-dropdown">
+            <a href="services.html">Our Services <span class="chevron">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="service-detail.html?service=cctv">CCTV Camera Systems</a></li>
+              <li><a href="service-detail.html?service=turnstile">Turnstile Systems</a></li>
+              <li><a href="service-detail.html?service=parking">Parking Management</a></li>
+              <li><a href="service-detail.html?service=pabx">PABX & Intercom</a></li>
+              <li><a href="service-detail.html?service=access">Access Control</a></li>
+              <li><a href="service-detail.html?service=smartlock">Smart Lock Solutions</a></li>
+              <li><a href="service-detail.html?service=electric">Electric Fencing</a></li>
+              <li><a href="service-detail.html?service=tracking">Car Tracking</a></li>
+              <li><a href="service-detail.html?service=gate">Gate Automation</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="contact.html" class="btn btn--primary">Request a Quote</a>
+          <button class="nav__toggle" id="navToggle"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <p class="breadcrumb"><a href="index.html">Home</a> › <span>Contact Us</span></p>
+      <h1>Get In Touch</h1>
+      <p>Contact us today and our team will reach out to you within 24 hours.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="contact-layout">
+
+      <div class="contact-info">
+        <span class="section-tag">Contact Information</span>
+        <h2>We'd Love to Hear From You</h2>
+        <p>Whether you need a security assessment, a quote for installation, or just have questions about our services — we're here to help.</p>
+
+        <div class="contact-card">
+          <div class="contact-card__icon">📞</div>
+          <div><h4>Phone</h4><a href="tel:+2348134660834">+234 813 466 0834</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">💬</div>
+          <div><h4>WhatsApp</h4><a href="https://wa.me/2348134660834" target="_blank">Chat with us on WhatsApp</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">✉️</div>
+          <div><h4>Email</h4><a href="mailto:jokamavtech@gmail.com">jokamavtech@gmail.com</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">📍</div>
+          <div><h4>Address</h4><p>Challenge, Ibadan, Oyo State, Nigeria</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">🕐</div>
+          <div><h4>Working Hours</h4><p>Monday – Saturday: 8:00 AM – 6:00 PM</p></div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3>Request a Quote</h3>
+        <p>Fill out the form below and we'll get back to you promptly.</p>
+
+        <div id="formSuccess" class="form-success">
+          <h4>✅ Message Sent!</h4>
+          <p>Thank you for contacting us. Our team will reach out within 24 hours.</p>
+        </div>
+
+        <form id="contactForm" action="https://formspree.io/f/jokamavtech@gmail.com" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+234 xxx xxx xxxx" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a Service</option>
+              <option>CCTV Camera Systems</option>
+              <option>Turnstile Systems</option>
+              <option>Parking Management & Boom Barriers</option>
+              <option>PABX & Intercom Systems</option>
+              <option>Access Control & Lift Control</option>
+              <option>Smart Lock Solutions</option>
+              <option>Electric Fencing Systems</option>
+              <option>Car Tracking</option>
+              <option>Gate Automation</option>
+              <option>Multiple Services</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="location">Your Location</label>
+            <input type="text" id="location" name="location" placeholder="City, State">
+          </div>
+          <div class="form-group">
+            <label for="message">Message / Details</label>
+            <textarea id="message" name="message" placeholder="Tell us more about your project or requirements..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message →</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__top"><div class="container"><div class="footer__grid">
+      <div class="footer__col footer__brand">
+        <div class="footer__logo"><span class="nav__logo-icon">⚡</span><span>Jokamav<strong>Tech</strong></span></div>
+        <p>Delivering reliable, innovative, and scalable technology solutions across Nigeria.</p>
+        <div class="footer__social"><a href="https://wa.me/2348134660834" target="_blank">💬</a><a href="mailto:jokamavtech@gmail.com">✉️</a><a href="tel:+2348134660834">📞</a></div>
+      </div>
+      <div class="footer__col"><h4>Our Services</h4><ul>
+        <li><a href="service-detail.html?service=cctv">CCTV Camera Systems</a></li>
+        <li><a href="service-detail.html?service=turnstile">Turnstile Systems</a></li>
+        <li><a href="service-detail.html?service=parking">Parking Management</a></li>
+        <li><a href="service-detail.html?service=pabx">PABX & Intercom</a></li>
+        <li><a href="service-detail.html?service=access">Access Control</a></li>
+        <li><a href="service-detail.html?service=electric">Electric Fencing</a></li>
+        <li><a href="service-detail.html?service=tracking">Car Tracking</a></li>
+        <li><a href="service-detail.html?service=gate">Gate Automation</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Contact Us</h4>
+        <div class="footer__contact">
+          <p>📞 <a href="tel:+2348134660834">+234 813 466 0834</a></p>
+          <p>💬 <a href="https://wa.me/2348134660834">WhatsApp Us</a></p>
+          <p>✉️ <a href="mailto:jokamavtech@gmail.com">jokamavtech@gmail.com</a></p>
+          <p>📍 Challenge, Ibadan, Oyo State, Nigeria</p>
+        </div>
+        <div class="footer__established">✦ Established July 13, 2015</div>
+      </div>
+    </div></div></div>
+    <div class="footer__bottom"><div class="container">
+      <p>&copy; <span id="year"></span> Jokamav Technologies Limited. All rights reserved.</p>
+      <p>Designed with ❤️ in Nigeria</p>
+    </div></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').style.display = 'block';
+      this.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

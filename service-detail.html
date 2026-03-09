@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Detail - Jokamav Technologies Limited</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/service-detail.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="announcement-bar">
+      <p>🔒 Jokamav Technologies — Specializing in Modern Security & Smart Infrastructure Solutions</p>
+    </div>
+    <nav class="nav">
+      <div class="nav__container">
+        <a href="index.html" class="nav__logo">
+          <span class="nav__logo-icon">⚡</span>
+          <span>Jokamav<strong>Tech</strong></span>
+        </a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li class="has-dropdown">
+            <a href="services.html" class="active">Our Services <span class="chevron">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="service-detail.html?service=cctv">CCTV Camera Systems</a></li>
+              <li><a href="service-detail.html?service=turnstile">Turnstile Systems</a></li>
+              <li><a href="service-detail.html?service=parking">Parking Management</a></li>
+              <li><a href="service-detail.html?service=pabx">PABX & Intercom</a></li>
+              <li><a href="service-detail.html?service=access">Access Control</a></li>
+              <li><a href="service-detail.html?service=smartlock">Smart Lock Solutions</a></li>
+              <li><a href="service-detail.html?service=electric">Electric Fencing</a></li>
+              <li><a href="service-detail.html?service=tracking">Car Tracking</a></li>
+              <li><a href="service-detail.html?service=gate">Gate Automation</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="contact.html" class="btn btn--primary">Request a Quote</a>
+          <button class="nav__toggle" id="navToggle"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SERVICE HERO - populated by JS -->
+  <section class="page-hero" id="serviceHero">
+    <div class="page-hero__inner">
+      <p class="breadcrumb"><a href="index.html">Home</a> › <a href="services.html">Services</a> › <span id="serviceName">Service</span></p>
+      <h1 id="serviceTitle">Loading...</h1>
+      <p id="serviceTagline"></p>
+      <a href="contact.html" class="btn btn--primary btn--lg" style="margin-top:24px;">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- SERVICE CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-layout">
+
+        <div class="svc-main">
+          <div class="svc-desc">
+            <h2>About This Service</h2>
+            <p id="serviceDesc"></p>
+          </div>
+
+          <div class="svc-features">
+            <h2>Key Features & Benefits</h2>
+            <div class="svc-features__grid" id="serviceFeaturesGrid"></div>
+          </div>
+        </div>
+
+        <div class="svc-sidebar">
+          <div class="svc-sidebar__card">
+            <h3>Get a Free Quote</h3>
+            <p>Fill out the form and our team will contact you within 24 hours.</p>
+            <a href="contact.html" class="btn btn--primary" style="width:100%;text-align:center;display:block;">Request a Quote</a>
+            <div class="svc-sidebar__divider">or contact us directly</div>
+            <a href="https://wa.me/2348134660834" target="_blank" class="svc-sidebar__whatsapp">
+              💬 Chat on WhatsApp
+            </a>
+            <a href="tel:+2348134660834" class="svc-sidebar__phone">
+              📞 +234 813 466 0834
+            </a>
+          </div>
+
+          <div class="svc-sidebar__services">
+            <h4>Other Services</h4>
+            <ul id="otherServices"></ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <span class="section-tag section-tag--orange">Why Choose Us</span>
+        <h2>The Jokamav Advantage</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-card__icon">🏆</div><h3>10+ Years Experience</h3><p>Established 2015. Hundreds of successful projects across Nigeria.</p></div>
+        <div class="why-card"><div class="why-card__icon">🔧</div><h3>Expert Installation</h3><p>Certified technicians ensuring every system meets the highest standards.</p></div>
+        <div class="why-card"><div class="why-card__icon">📞</div><h3>24/7 Support</h3><p>Ongoing maintenance and support to keep your systems running perfectly.</p></div>
+        <div class="why-card"><div class="why-card__icon">💡</div><h3>Latest Technology</h3><p>Continuously adopting emerging technologies and best security practices.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us today and our team will reach out to you promptly.</p>
+        <div class="cta-banner__buttons">
+          <a href="contact.html" class="btn btn--white">Request a Quote</a>
+          <a href="https://wa.me/2348134660834" target="_blank" class="btn btn--outline-white">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col footer__brand">
+            <div class="footer__logo"><span class="nav__logo-icon">⚡</span><span>Jokamav<strong>Tech</strong></span></div>
+            <p>Delivering reliable, innovative, and scalable technology solutions across Nigeria.</p>
+            <div class="footer__social">
+              <a href="https://wa.me/2348134660834" target="_blank">💬</a>
+              <a href="mailto:jokamavtech@gmail.com">✉️</a>
+              <a href="tel:+2348134660834">📞</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="service-detail.html?service=cctv">CCTV Camera Systems</a></li>
+              <li><a href="service-detail.html?service=turnstile">Turnstile Systems</a></li>
+              <li><a href="service-detail.html?service=parking">Parking Management</a></li>
+              <li><a href="service-detail.html?service=pabx">PABX & Intercom</a></li>
+              <li><a href="service-detail.html?service=access">Access Control</a></li>
+              <li><a href="service-detail.html?service=smartlock">Smart Lock Solutions</a></li>
+              <li><a href="service-detail.html?service=electric">Electric Fencing</a></li>
+              <li><a href="service-detail.html?service=tracking">Car Tracking</a></li>
+              <li><a href="service-detail.html?service=gate">Gate Automation</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Our Services</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Contact Us</h4>
+            <div class="footer__contact">
+              <p>📞 <a href="tel:+2348134660834">+234 813 466 0834</a></p>
+              <p>💬 <a href="https://wa.me/2348134660834">WhatsApp Us</a></p>
+              <p>✉️ <a href="mailto:jokamavtech@gmail.com">jokamavtech@gmail.com</a></p>
+              <p>📍 Challenge, Ibadan, Oyo State, Nigeria</p>
+            </div>
+            <div class="footer__established">✦ Established July 13, 2015</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Jokamav Technologies Limited. All rights reserved.</p>
+        <p>Designed with ❤️ in Nigeria</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/services-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/service-detail.js"></script>
+</body>
+</html>
